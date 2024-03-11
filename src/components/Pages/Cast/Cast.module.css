@@ -1,0 +1,30 @@
+.list {
+  display: grid;
+  width: auto;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-gap: 16px;
+  justify-items: center;
+  padding: 0;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h4 {
+  margin: 0 0 4px 0;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.text {
+  margin-bottom: 8px;
+}

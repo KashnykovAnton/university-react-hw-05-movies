@@ -1,0 +1,22 @@
+ul {
+  padding: 0;
+}
+
+.review {
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: var(--fourth-color);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.author {
+  margin: 0 0 8px 0;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.text {
+  margin: 0;
+}
