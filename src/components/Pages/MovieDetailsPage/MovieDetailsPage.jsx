@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   Link,
   useParams,
@@ -15,6 +15,7 @@ import styles from './MovieDetailsPage.module.css';
 const MovieDetailsPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const goBack = useRef(location);
   const { movieId } = useParams();
   const [movie, setMovieDetails] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -38,7 +39,7 @@ const MovieDetailsPage = () => {
   }, [movieId]);
 
   const handleGoBack = () => {
-    navigate(location.state ?? '/');
+    navigate(goBack.current.state ?? '/');
   };
 
   return (
