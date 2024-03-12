@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/university-react-hw-05-movies/static/css/main.df3bac16.css",
-    "main.js": "/university-react-hw-05-movies/static/js/main.c02376b0.js",
+    "main.js": "/university-react-hw-05-movies/static/js/main.fa085e67.js",
     "home-page.css": "/university-react-hw-05-movies/static/css/home-page.8bcf21d2.chunk.css",
     "home-page.js": "/university-react-hw-05-movies/static/js/home-page.6ab505fa.chunk.js",
     "movies-page.css": "/university-react-hw-05-movies/static/css/movies-page.834905d2.chunk.css",
@@ -17,7 +17,7 @@
     "static/js/154.449017d8.chunk.js": "/university-react-hw-05-movies/static/js/154.449017d8.chunk.js",
     "index.html": "/university-react-hw-05-movies/index.html",
     "main.df3bac16.css.map": "/university-react-hw-05-movies/static/css/main.df3bac16.css.map",
-    "main.c02376b0.js.map": "/university-react-hw-05-movies/static/js/main.c02376b0.js.map",
+    "main.fa085e67.js.map": "/university-react-hw-05-movies/static/js/main.fa085e67.js.map",
     "home-page.8bcf21d2.chunk.css.map": "/university-react-hw-05-movies/static/css/home-page.8bcf21d2.chunk.css.map",
     "home-page.6ab505fa.chunk.js.map": "/university-react-hw-05-movies/static/js/home-page.6ab505fa.chunk.js.map",
     "movies-page.834905d2.chunk.css.map": "/university-react-hw-05-movies/static/css/movies-page.834905d2.chunk.css.map",
@@ -34,6 +34,6 @@
   },
   "entrypoints": [
     "static/css/main.df3bac16.css",
-    "static/js/main.c02376b0.js"
+    "static/js/main.fa085e67.js"
   ]
 }
