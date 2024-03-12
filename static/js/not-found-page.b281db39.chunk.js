@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkuniversity_react_hw_05_movies=self.webpackChunkuniversity_react_hw_05_movies||[]).push([[319],{400:(e,s,i)=>{i.r(s),i.d(s,{default:()=>_});const n="NotFoundPage_Container__GgK6d";var t=i(579);const _=()=>(0,t.jsxs)("div",{className:n,children:[(0,t.jsx)("h1",{children:"Such page doesn't exist!"}),(0,t.jsx)("p",{children:"\xaf\\_(\u30c4)_/\xaf"})]})}}]);
+//# sourceMappingURL=not-found-page.b281db39.chunk.js.map
