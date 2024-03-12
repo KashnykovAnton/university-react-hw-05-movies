@@ -1,6 +1,13 @@
 :root {
-  --first-color: hotpink;
-  --second-color: green;
-  --third-color: red;
-  --fourth-color: blue;
+  --first-color: #528e86;
+  --second-color: #b7ced2;
+  --third-color: #dcdde2;
+  --fourth-color: #b1afac;
+  --fifth-color: #636250;
+  --text-color: #292923;
 }
+
+* {
+  color: var(--text-color);
+}
+

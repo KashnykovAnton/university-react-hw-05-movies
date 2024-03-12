@@ -5,4 +5,5 @@
   padding-left: 15px;
   padding-right: 15px;
   background-color: var(--third-color);
+  min-height: 100vh;
 }

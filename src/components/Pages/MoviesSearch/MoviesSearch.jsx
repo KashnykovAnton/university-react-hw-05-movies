@@ -1,6 +1,6 @@
-import styles from './MoviesSearch.module.css';
-import { toast } from 'react-toastify';
 import { useState } from 'react';
+import { warningMessage } from 'components/services/toast';
+import styles from './MoviesSearch.module.css';
 
 const MoviesSearch = ({ onValueSubmit }) => {
   const [valueSearch, setValueSearch] = useState('');
@@ -12,9 +12,10 @@ const MoviesSearch = ({ onValueSubmit }) => {
   const handleSubmit = e => {
     e.preventDefault();
     if (valueSearch.trim() === '') {
-      toast.error('Введите корректное название!');
+      warningMessage('Please, type something!');
+    } else {
+      onValueSubmit(valueSearch);
     }
-    onValueSubmit(valueSearch);
     setValueSearch('');
   };
 

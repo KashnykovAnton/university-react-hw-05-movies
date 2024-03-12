@@ -1,26 +1,36 @@
-import styles from './HomePage.module.css';
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { fetchTrendMovies } from '../../services/movies-api';
+import { Link} from 'react-router-dom';
+import LoaderSpin from 'components/Loader/LoaderSpin';
+import { fetchTrendMovies } from 'components/services/movies-api';
+import { errorMessage } from 'components/services/toast';
+import { checkPath } from 'components/services/utils';
+import styles from './HomePage.module.css';
 
 const HomePage = () => {
-  const location = useLocation();
   const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    fetchTrendMovies()
-      .then(data => {
-        if (data.results.length !== 0) {
-          setMovies(data.results);
+    const getTrendMovies = async () => {
+      try {
+        setIsLoading(true);
+        const { results } = await fetchTrendMovies();
+        if (!results) {
+          return;
         }
-      })
-      .catch(err => {
-        console.log(err);
-      });
+        setMovies(results);
+      } catch (error) {
+        errorMessage(`Something went wrong: ${error.message}`);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    getTrendMovies();
   }, []);
 
   return (
     <>
+      {isLoading && <LoaderSpin />}
       {movies && (
         <ul className={styles.list}>
           {movies.map(({ id, original_title, name, poster_path }) => {
@@ -29,13 +39,12 @@ const HomePage = () => {
                 <Link
                   to={{
                     pathname: `/movies/${id}`,
-                    state: { from: location },
                   }}
                   className={styles.link}
                 >
                   <div className={styles.itemDiv}>
                     <img
-                      src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+                      src={checkPath(poster_path, "poster")}
                       alt={original_title}
                       width="240px"
                     />

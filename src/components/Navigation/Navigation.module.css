@@ -16,6 +16,8 @@
   text-decoration: none;
   text-align: center;
   cursor: pointer;
+
+
 }
 
 .link:not(:last-child) {
@@ -27,6 +29,8 @@
   box-shadow: 0 0 0 4px #cbd6ee;
 }
 
-nav > a:active {
+.active {
+  composes: link;
   background: var(--first-color);
 }
+

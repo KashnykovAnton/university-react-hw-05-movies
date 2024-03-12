@@ -10,10 +10,11 @@
   margin-right: auto;
 }
 
-img {
+.CastImage {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 180px;
+  object-fit: cover;
   margin-bottom: 16px;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
