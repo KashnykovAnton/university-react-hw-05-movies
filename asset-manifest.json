@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/university-react-hw-05-movies/static/css/main.df3bac16.css",
-    "main.js": "/university-react-hw-05-movies/static/js/main.2572fda6.js",
+    "main.js": "/university-react-hw-05-movies/static/js/main.c02376b0.js",
     "home-page.css": "/university-react-hw-05-movies/static/css/home-page.8bcf21d2.chunk.css",
     "home-page.js": "/university-react-hw-05-movies/static/js/home-page.6ab505fa.chunk.js",
     "movies-page.css": "/university-react-hw-05-movies/static/css/movies-page.834905d2.chunk.css",
     "movies-page.js": "/university-react-hw-05-movies/static/js/movies-page.d45a6e4c.chunk.js",
     "movie-details-page.css": "/university-react-hw-05-movies/static/css/movie-details-page.77fdebf2.chunk.css",
-    "movie-details-page.js": "/university-react-hw-05-movies/static/js/movie-details-page.91556497.chunk.js",
+    "movie-details-page.js": "/university-react-hw-05-movies/static/js/movie-details-page.648082cd.chunk.js",
     "cast-subpage.css": "/university-react-hw-05-movies/static/css/cast-subpage.c4a25c07.chunk.css",
     "cast-subpage.js": "/university-react-hw-05-movies/static/js/cast-subpage.6e9062a5.chunk.js",
     "reviews-subpage.css": "/university-react-hw-05-movies/static/css/reviews-subpage.65dc4ad1.chunk.css",
@@ -17,13 +17,13 @@
     "static/js/154.449017d8.chunk.js": "/university-react-hw-05-movies/static/js/154.449017d8.chunk.js",
     "index.html": "/university-react-hw-05-movies/index.html",
     "main.df3bac16.css.map": "/university-react-hw-05-movies/static/css/main.df3bac16.css.map",
-    "main.2572fda6.js.map": "/university-react-hw-05-movies/static/js/main.2572fda6.js.map",
+    "main.c02376b0.js.map": "/university-react-hw-05-movies/static/js/main.c02376b0.js.map",
     "home-page.8bcf21d2.chunk.css.map": "/university-react-hw-05-movies/static/css/home-page.8bcf21d2.chunk.css.map",
     "home-page.6ab505fa.chunk.js.map": "/university-react-hw-05-movies/static/js/home-page.6ab505fa.chunk.js.map",
     "movies-page.834905d2.chunk.css.map": "/university-react-hw-05-movies/static/css/movies-page.834905d2.chunk.css.map",
     "movies-page.d45a6e4c.chunk.js.map": "/university-react-hw-05-movies/static/js/movies-page.d45a6e4c.chunk.js.map",
     "movie-details-page.77fdebf2.chunk.css.map": "/university-react-hw-05-movies/static/css/movie-details-page.77fdebf2.chunk.css.map",
-    "movie-details-page.91556497.chunk.js.map": "/university-react-hw-05-movies/static/js/movie-details-page.91556497.chunk.js.map",
+    "movie-details-page.648082cd.chunk.js.map": "/university-react-hw-05-movies/static/js/movie-details-page.648082cd.chunk.js.map",
     "cast-subpage.c4a25c07.chunk.css.map": "/university-react-hw-05-movies/static/css/cast-subpage.c4a25c07.chunk.css.map",
     "cast-subpage.6e9062a5.chunk.js.map": "/university-react-hw-05-movies/static/js/cast-subpage.6e9062a5.chunk.js.map",
     "reviews-subpage.65dc4ad1.chunk.css.map": "/university-react-hw-05-movies/static/css/reviews-subpage.65dc4ad1.chunk.css.map",
@@ -34,6 +34,6 @@
   },
   "entrypoints": [
     "static/css/main.df3bac16.css",
-    "static/js/main.2572fda6.js"
+    "static/js/main.c02376b0.js"
   ]
 }
