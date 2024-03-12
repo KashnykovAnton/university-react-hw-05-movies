@@ -15,7 +15,6 @@ import styles from './MovieDetailsPage.module.css';
 const MovieDetailsPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [locationState, setLocationState] = useState('');
   const { movieId } = useParams();
   const [movie, setMovieDetails] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -38,12 +37,8 @@ const MovieDetailsPage = () => {
     getMovieDetails();
   }, [movieId]);
 
-  useEffect(() => {
-    setLocationState(`${location.state.pathname}${location.state.search}`);
-  }, []);
-
   const handleGoBack = () => {
-    navigate(locationState ?? '/');
+    navigate(location.state ?? '/');
   };
 
   return (
