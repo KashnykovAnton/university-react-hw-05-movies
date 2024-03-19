@@ -5,19 +5,20 @@ const BASE_URL = 'https://api.themoviedb.org/3/';
 
 axios.defaults.baseURL = BASE_URL;
 
-
 // Trending movies
 // https://api.themoviedb.org/3/trending/movie/day?api_key=<<api_key>>
 export async function fetchTrendMovies() {
-  const {data} = await axios(`trending/movie/day?${API_KEY}`);
+  const { data } = await axios(`trending/movie/day?${API_KEY}`);
   return data;
 }
 
 // Search movies
 // https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&page=1&include_adult=false
 export async function fetchSearchMovies(value, page) {
-  const {data} = await axios(`search/movie?query=${value}&page=${page}&${API_KEY}&language=en-US&include_adult=false`);
-  return data
+  const { data } = await axios(
+    `search/movie?query=${value}&page=${page}&${API_KEY}&language=en-US&include_adult=false`
+  );
+  return data;
 }
 
 // Get movie details

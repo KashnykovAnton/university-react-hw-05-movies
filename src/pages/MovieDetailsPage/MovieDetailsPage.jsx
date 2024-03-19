@@ -42,6 +42,8 @@ const MovieDetailsPage = () => {
     navigate(goBack.current.state ?? '/');
   };
 
+
+
   return (
     <div className={styles.MovieDetailsContainer}>
       {isLoading && <LoaderSpin />}

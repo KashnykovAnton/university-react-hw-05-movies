@@ -8,7 +8,8 @@ function LoaderSpin() {
         visible={true}
         height="80"
         width="80"
-        color="#00BFFF"
+        color="var(--loader-color)"
+        secondaryColor="var(--first-color)"
         ariaLabel="oval-loading"
       />
     </div>

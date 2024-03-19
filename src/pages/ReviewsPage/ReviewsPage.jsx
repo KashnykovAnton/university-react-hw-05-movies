@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import LoaderSpin from 'components/Loader/LoaderSpin';
 import { fetchGetMovieReviews } from 'components/services/movies-api';
 import { errorMessage } from 'components/services/toast';
-import styles from './Reviews.module.css';
+import styles from './ReviewsPage.module.css';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);

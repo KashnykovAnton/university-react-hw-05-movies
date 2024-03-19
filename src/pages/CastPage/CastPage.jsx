@@ -4,7 +4,7 @@ import LoaderSpin from 'components/Loader/LoaderSpin';
 import { errorMessage } from 'components/services/toast';
 import { fetchGetMovieCredits } from 'components/services/movies-api';
 import { checkPath } from 'components/services/utils';
-import styles from './Cast.module.css';
+import styles from './CastPage.module.css';
 
 const Cast = () => {
   const [credits, setCredits] = useState([]);

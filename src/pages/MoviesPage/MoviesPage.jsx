@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation, useSearchParams } from 'react-router-dom';
-import MoviesSearch from '../MoviesSearch/MoviesSearch';
+import { useSearchParams } from 'react-router-dom';
+import MoviesSearch from 'components/MoviesSearch/MoviesSearch';
 import LoaderSpin from 'components/Loader/LoaderSpin';
 import { infoMessage, errorMessage } from 'components/services/toast';
 import { fetchSearchMovies } from 'components/services/movies-api';
-import { checkPath } from 'components/services/utils';
-import styles from './MoviesPage.module.css';
+import MoviesList from 'components/MoviesList/MoviesList';
+import LoadMoreButton from 'components/LoadMoreButton/LoadMoreButton';
+import Container from 'components/Container/Container';
 
 const MoviesPage = () => {
-  const location = useLocation();
-  const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(Number(searchParams.get('page')) || 1);
   const [totalPages, setTotalPages] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
@@ -49,52 +49,19 @@ const MoviesPage = () => {
     setSearchParams({ query: value, page: 1 });
   };
 
-  const handleClick = () => {
+  const handleCLick = () => {
     setPage(prevPage => prevPage + 1);
     const prevParams = Object.fromEntries([...searchParams]);
     setSearchParams({ ...prevParams, page: Number(page) + 1 });
   };
 
   return (
-    <>
+    <Container>
       <MoviesSearch onValueSubmit={onSearchValue} />
+      {movies.length > 0 && <MoviesList movies={movies} />}
+      {page !== totalPages && <LoadMoreButton handleCLick={handleCLick} />}
       {isLoading && <LoaderSpin />}
-      <>
-        <ul className={styles.list}>
-          {movies.map(({ id, original_title, name, poster_path }) => {
-            return (
-              <li key={id} className={styles.item}>
-                <Link
-                  to={`${location.pathname}/${id}`}
-                  state={location}
-                  className={styles.link}
-                >
-                  <div className={styles.itemDiv}>
-                    <img
-                      src={checkPath(poster_path, 'poster')}
-                      alt={original_title}
-                      width="240px"
-                    />
-                    <p>{original_title ?? name}</p>
-                  </div>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-        {page !== totalPages && (
-          <div className={styles.divButton}>
-            <button
-              className={styles.button}
-              type="button"
-              onClick={handleClick}
-            >
-              LoadMore
-            </button>
-          </div>
-        )}
-      </>
-    </>
+    </Container>
   );
 };
 
